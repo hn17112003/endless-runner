@@ -37,6 +37,26 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
+    //private void GenaratePlatform()
+    //{
+    //    while (Vector2.Distance(player.transform.position, nextPartPosition) < distanceToSpawn)
+    //    {
+    //        Transform part = GetRandomPlatform();
+
+    //        Vector2 newPosition = new Vector2(nextPartPosition.x - part.Find("StartPoint").position.x, nextPartPosition.y);
+
+    //        float randomGap = Random.Range(1f, 2f);
+    //        float randomHeight = Random.Range(-8f, 8f);
+
+    //        newPosition.x += randomGap;
+    //        newPosition.y += randomHeight;
+
+    //        Transform newPart = Instantiate(part, newPosition, transform.rotation, transform);
+
+    //        nextPartPosition = newPart.Find("EndPoint").position;
+    //    }
+    //}
+
     private void DeletePlatform()
     {
         if (transform.childCount > 0)
@@ -53,19 +73,9 @@ public class LevelGenerator : MonoBehaviour
 
     private Transform GetRandomPlatform()
     {
-        int random = Random.Range(0, 100);
-        if (random < 50)
-        {
-            return levelPart[0];
-        }
-        else if (random < 80) 
-        {
-            return levelPart[1];
-        }
-        else 
-        {
-            return levelPart[2];
-        }
+        int randomIndex = Random.Range(0, levelPart.Length); 
+        return levelPart[0];
     }
+
 
 }

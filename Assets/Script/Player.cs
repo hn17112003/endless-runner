@@ -7,10 +7,14 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator anim;
+
     private bool isRunning;
+
     public bool playerUnlocked;
     private bool isGrounded;
     private float movingInput;
+
+    private bool canDoubleJump;
 
     [Header("Move info")]
     [SerializeField] private float moveSpeed;
@@ -60,6 +64,7 @@ public class Player : MonoBehaviour
 
         //anim.SetBool("isRunning", isRunning);
         anim.SetBool("isGrounded", isGrounded);
+        anim.SetBool("canDoubleJump", canDoubleJump);
         anim.SetFloat("yVelocity", rb.velocity.y);
         anim.SetFloat("xVelocity", rb.velocity.x);
 
@@ -72,14 +77,29 @@ public class Player : MonoBehaviour
 
     private void CheckInput()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-
-        }
         if (Input.GetButtonDown("Fire2"))
         {
             playerUnlocked = true;
+        }
+
+        if (Input.GetButtonDown("Jump") )
+        {
+            JumpButton();
+
+        }
+    }
+
+    private void JumpButton()
+    {
+        if (isGrounded)
+        {
+            canDoubleJump = true;
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
+        else if (canDoubleJump)
+        {
+            canDoubleJump = false;
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
 
