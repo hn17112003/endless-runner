@@ -764,7 +764,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.25475, y: 12.3, z: -10}
+  m_LocalPosition: {x: 23.250675, y: 12.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -964,7 +964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e028ad6dc0510cf4b9c87d85b26e1e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountOfCoins: 5
+  amountOfCoins: 50
   coinPrefab: {fileID: 8275018984582077073, guid: 8c8a6828744612744ba99a4517f3b090, type: 3}
 --- !u!4 &669691494
 Transform:
@@ -1057,12 +1057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelPart:
   - {fileID: 2375752116074254178, guid: 8e25b39bb7de3ef48b525fe2e1d0cfa1, type: 3}
-  - {fileID: 2375752116074254178, guid: 96a606d3800249a48887dc8fe0ed4935, type: 3}
-  - {fileID: 2375752116074254178, guid: f53e092dba6dcbf4893017020a11f022, type: 3}
-  - {fileID: 2375752116074254178, guid: b36363cee526c2e4c9bb308b23ac4e62, type: 3}
-  - {fileID: 2375752116074254178, guid: 477541a2defeab549b0af485b10d3311, type: 3}
-  - {fileID: 2375752116074254178, guid: 4ef672a9c7d17e24c860a7ba3b0b83e3, type: 3}
-  - {fileID: 2375752116074254178, guid: 348ce8509b81e26489c9aa193fdee974, type: 3}
+  - {fileID: 2375752116074254178, guid: 9631ea464e096884ca6e8e609d6e30fb, type: 3}
   nextPartPosition: {x: 0, y: 0, z: 0}
   distanceToSpawn: 100
   distanceToDelete: 100
@@ -1247,7 +1242,7 @@ Transform:
   m_GameObject: {fileID: 986064902}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.25475, y: 12.3, z: -10}
+  m_LocalPosition: {x: 23.250675, y: 12.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1449,12 +1444,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316363277}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14f9178a486f5c343adfcea4ef1faa1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1316363277}
+  player: {fileID: 417300429}
   speed: 10
 --- !u!212 &1316363279
 SpriteRenderer:
